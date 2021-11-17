@@ -90,9 +90,10 @@ public class testPeluqueria {
             System.out.println(" 2.- Agregar nuevos Servicios");
             System.out.println(" 3.- Visualizar los servicios");
             System.out.println(" 4.- Buscar un servicio");
+            System.out.println(" 5.- Borrar un servicio");
             System.out.println(" 0.- Salir");
             System.out.println("Seleccione una opción: ");
-            
+
             opcion = scn.nextInt();
 
             switch (opcion) {
@@ -100,18 +101,19 @@ public class testPeluqueria {
                     historialServicios.iniciarHistorialActividad(nombrefichero);
                     break;
                 case 2:
-                    System.out.print("Introduce el nombre de la servicio a agregar:\t");
+                    System.out.println("Introduce el nombre de la servicio a agregar:\t");
                     Scanner dato = new Scanner(System.in);
+                    Scanner dato2 = new Scanner(System.in);
                     nombreServicioAdd = dato.nextLine();
 
-                    System.out.print("Introduce el precio de la servicio a agregar:\t");
+                    System.out.println("Introduce el precio de la servicio a agregar:\t");
                     precioAdd = dato.nextDouble();
 
-                    System.out.print("Introduce la duración del servicio:\t");
+                    System.out.println("Introduce la duración del servicio:\t");
                     duracionAdd = dato.nextInt();
 
                     System.out.println("Introduce la descripción del servicio: ");
-                    descripcionAdd = dato.nextLine();
+                    descripcionAdd = dato2.nextLine();
 
                     historialServicios.agregarServicio(nombrefichero, new Servicio(nombreServicioAdd, precioAdd, duracionAdd, descripcionAdd));
                     break;
@@ -120,11 +122,14 @@ public class testPeluqueria {
                     break;
 
                 case 4:
-                    System.out.printf("Intorduce el nombre de la servicio a buscar: ");
+                    System.out.println("Intorduce el nombre de la servicio a buscar: ");
                     Scanner busqueda = new Scanner(System.in);
                     busqueda.nextLine();
                     String pBuscar = busqueda.nextLine();
                     historialServicios.buscarUnServicio(nombrefichero, pBuscar);
+                    break;
+                case 5:
+                    
                     break;
 
                 case 0:
@@ -153,7 +158,7 @@ public class testPeluqueria {
             System.out.println("4.- Acceder a los empleados");
             System.out.println("0.- Salir");
             System.out.println("Seleccione una opción");
-            
+
             opcion = scn.nextInt();
 
             switch (opcion) {

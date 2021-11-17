@@ -49,7 +49,7 @@ public class AccesoDatosFicheroImpl implements IAccesoDatosFichero {
 
         } catch (Exception ex) {
             ex.printStackTrace(System.out);
-            throw new ExcepcionesLectura("Error de lectura listando los productos");
+            throw new ExcepcionesLectura("Error de lectura leyendo los servicios");
         }
 
         return servicios;

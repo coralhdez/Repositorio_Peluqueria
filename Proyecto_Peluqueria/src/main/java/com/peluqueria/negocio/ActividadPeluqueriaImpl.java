@@ -46,7 +46,7 @@ public class ActividadPeluqueriaImpl implements IActividadPeluqueria {
     }
 
     @Override
-    public String leerServicios(String nombreFichero) {
+    public void leerServicios(String nombreFichero) {
         List<Servicio> arrayServicios = new ArrayList<>();
 
         try {
@@ -63,7 +63,7 @@ public class ActividadPeluqueriaImpl implements IActividadPeluqueria {
             ex.printStackTrace(System.out);
             System.out.println("Error leyendo el historial de servicios");
         }
-        return "";
+        
     }
 
     @Override

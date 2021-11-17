@@ -8,7 +8,7 @@ public interface IActividadPeluqueria {
     
     void agregarServicio(String nombreFichero, Servicio servicio);
     
-    String leerServicios(String nombreFichero);
+    void leerServicios(String nombreFichero);
     
     void mostrarPorductoNombre(String nombreFichero, String nombreServicio); 
     
