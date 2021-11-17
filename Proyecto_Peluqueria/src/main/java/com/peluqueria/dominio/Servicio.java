@@ -15,6 +15,7 @@ public class Servicio {
     }
 
     public Servicio(String nombreServicio, double precio, int duracion, String descripcion) {
+        this();
         this.nombreServicio = nombreServicio;
         this.precio = precio;
         this.duracion = duracion;
