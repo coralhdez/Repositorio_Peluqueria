@@ -1,5 +1,5 @@
 
-package com.peluqueria.excepciones;
+package com.cine.excepciones;
 
 
 public class ExcepcionesEscritura  extends ExcepcionesAccesoDatos{

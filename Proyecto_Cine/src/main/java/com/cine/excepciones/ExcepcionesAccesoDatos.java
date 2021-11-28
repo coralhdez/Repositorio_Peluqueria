@@ -1,4 +1,4 @@
-package com.peluqueria.excepciones;
+package com.cine.excepciones;
 
 public class ExcepcionesAccesoDatos extends Exception {
 
