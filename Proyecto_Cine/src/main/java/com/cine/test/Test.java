@@ -106,7 +106,7 @@ public class Test {
             System.out.println(" 3.- Visualizar productos");
             System.out.println(" 4.- Buscar Productos");
             System.out.println(" 5.- Borrar un productos");
-            System.out.println(" 6.- Visualizar precio/producto del almacén");
+            System.out.println(" 6.- Visualizar dinero del almacén");
             System.out.println(" 7.- Producto más caro");
             System.out.println(" 8.- Precio por Producto");
             System.out.println(" 9.- Ordenar por menor cantidad");
@@ -145,6 +145,7 @@ public class Test {
                     System.out.println("El importe contabilizado en: ");
                     historialProductos.precioPorProducto(nombrefichero);
                     System.out.println("");
+                    break;
                 case 9:
                     historialProductos.ordenarPorMenosCantidad(nombrefichero);
                     break;
