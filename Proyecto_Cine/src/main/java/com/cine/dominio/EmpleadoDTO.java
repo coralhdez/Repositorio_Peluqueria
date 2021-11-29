@@ -5,6 +5,8 @@ import java.util.*;
 
 
 public class EmpleadoDTO {
+     private static int idAuto = 1;
+     
     int idEmpleado;
     String nombre;
     String apellido1;
@@ -15,6 +17,7 @@ public class EmpleadoDTO {
     int cines_idcines;
 
     public EmpleadoDTO() {
+        this.idEmpleado = idAuto++;
     }
 
     public EmpleadoDTO(int idEmpleado, String nombre, String apellido1, String apellido2, String dni, String email, int Categoria_idCategoria, int cines_idcines) {
@@ -37,6 +40,17 @@ public class EmpleadoDTO {
         this.dni = dni;
         this.email = email;
     }
+
+    public EmpleadoDTO(String nombre, String apellido1, String apellido2, String dni, String email, int Categoria_idCategoria, int cines_idcines) {
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.dni = dni;
+        this.email = email;
+        this.Categoria_idCategoria = Categoria_idCategoria;
+        this.cines_idcines = cines_idcines;
+    }
+    
 
     public int getFk() {
         return Categoria_idCategoria;

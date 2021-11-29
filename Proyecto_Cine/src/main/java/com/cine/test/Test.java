@@ -59,7 +59,7 @@ public class Test {
     public static void menuBBDD() throws SQLException, ParseException {
         IActividadCine historialProductos = new ActividadCineImpl();
         int opcion;
-        System.out.println("\t************************\n"
+        System.out.println("\t*****************************\n"
                 + "\t           BASE DE DATOS"
                 + "\n\t*******************************\n"
                 + "\t1. Socios \n"
@@ -149,6 +149,7 @@ public class Test {
                     historialProductos.ordenarPorMenosCantidad(nombrefichero);
                     break;
                 case 0:
+                    System.out.println("Volver al Menú Principal");
                     menuPrincipal();
                     break;
             }
@@ -207,6 +208,7 @@ public class Test {
                     historialCines.ordenarPorAforo(ficheroCine);
                     break;
                 case 0:
+                    System.out.println("Volver al Menú Principal");
                     menuPrincipal();
                     break;
             }
@@ -231,9 +233,9 @@ public class Test {
 
             switch (opcion) {
                 case 1:
-                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("Yelmo Ideal", "633855201", "Madrid", 3000));
-                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("Yelmo Palafox", "6301587520", "Madrid", 1000));
-                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("Yelmo Bahía", "637410201", "Cádiz", 5000));
+                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("YelmoIdeal", "633855201", "Madrid", 3000));
+                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("YelmoPalafox", "6301587520", "Madrid", 1000));
+                    historialCines.agregarUnaEmpresa(ficheroCine, new Cine("YelmoBahia", "637410201", "Cádiz", 5000));                  
                     System.out.println("Se han agregado correctamente");
                     break;
                 case 2:
@@ -318,7 +320,6 @@ public class Test {
                     precioAdd = dato2.nextDouble();
 
                     System.out.println("Introduce la fecha de caducidad o validez: \t");
-
                     String fecha = dato2.next();
 
                     Producto p = new Producto(nombreProductoAdd, prov, cantidadAdd, precioAdd, fecha);
@@ -460,7 +461,7 @@ public class Test {
                         System.out.println("Cliente: " + cliente);
                     });
                     System.out.println("");
-
+                    break;
                 case 0:
 
                     break;
@@ -482,7 +483,7 @@ public class Test {
         Scanner scn = new Scanner(System.in);
 
         while (true) {
-            System.out.println("*** MENÚ *** ");
+            System.out.println("*** MENÚ EMPLEADOS*** ");
             System.out.println("1.- Dar de alta un empleado");
             System.out.println("2.- Actualizar empleados");
             System.out.println("3.- Dar de baja un empleado");
@@ -497,12 +498,12 @@ public class Test {
             switch (opcion) {
                 case 1:
                     //objetosEmpleadosDAO.insertar(e1);
-                    objetosEmpleadosDAO.insertar(e2);
+                    objetosEmpleadosDAO.insertar(e2);                 
                     break;
                 case 2:
                     objetosEmpleadosDAO.actualizar(new EmpleadoDTO(5, "Migueeeeel", "Costas", "Encabo", "57410000F", "miguel@gmail.com", 3, 0));
+                    System.out.println("Se han actualizado los datos");
                     break;
-
                 case 3:
                     objetosEmpleadosDAO.borrar(e2);
                     System.out.println("Empleado Borrado con éxito");
@@ -521,14 +522,16 @@ public class Test {
                         System.out.println("Empleado: " + empleado);
                     });
                     System.out.println("");
+                    break;
                 case 6:
                     List<EmpleadoDTO> empleados3 = objetosEmpleadosDAO.empleadoCategoriaBase();
                     empleados3.forEach(empleado -> {
                         System.out.println("Empleado: " + empleado);
                     });
                     System.out.println("");
-
+                    break;
                 case 0:
+                    System.out.println("Volver al menú principal");
                     menuBBDD();
                     break;
 
@@ -586,13 +589,14 @@ public class Test {
                         System.out.println("Empleado: " + categoria);
                     });
                     System.out.println("");
+                    break;
                 case 6:
                     List<CategoriaDTO> categoria3 = objetosCategoriaDAO.salarioSuperior();
                     categoria3.forEach(categoria -> {
                         System.out.println("Empleado: " + categoria);
                     });
                     System.out.println("");
-
+                    break;
                 case 0:
                     menuPrincipal();
                     break;
