@@ -415,7 +415,7 @@ public class Test {
 //        }
 //
 //    }
-    public static void clientes() throws SQLException {
+    public static void clientes() throws SQLException, ParseException {
         ClienteDao objetosClienteDAO = new ClienteDao();
         //OBJETOS CLASE PRODUCTO
         ClienteDTO c1 = new ClienteDTO(1, "Lara", "Iglesias", "Santos", "54125987-W", "605070070", "lara@gmail.com", 0);
@@ -463,7 +463,8 @@ public class Test {
                     System.out.println("");
                     break;
                 case 0:
-
+                    System.out.println("Volver al Menú de la BBDD");
+                    menuBBDD();
                     break;
 
             }
@@ -598,7 +599,8 @@ public class Test {
                     System.out.println("");
                     break;
                 case 0:
-                    menuPrincipal();
+                    System.out.println("Volver al Menú de la BBDD");
+                    menuBBDD();
                     break;
 
             }
